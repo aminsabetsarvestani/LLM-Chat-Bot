@@ -1,0 +1,22 @@
+langchain
+fastapi
+wandb
+ray[data,train,tune,serve]
+eschercloud
+SQLAlchemy
+passlib
+torch -f https://download.pytorch.org/whl/cu118
+torchvision -f https://download.pytorch.org/whl/cu118
+torchaudio -f https://download.pytorch.org/whl/cu118
+xformers
+accelerate
+sentencepiece
+bitsandbytes
+einops
+streamlit
+python-dotenv
+transformers
+scipy
+python-jose
+python-multipart
+weaviate-client

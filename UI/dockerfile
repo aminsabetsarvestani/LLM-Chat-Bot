@@ -1,0 +1,17 @@
+FROM python:3.8
+
+LABEL description="Container for Llama2 chatbot frontend."
+
+WORKDIR /app
+
+COPY ./frontend_requirements.txt /app/
+
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir --upgrade -r frontend_requirements.txt
+
+COPY ./document_frontend.py /app/
+
+EXPOSE 8501
+
+CMD [ "streamlit", "run", "document_frontend.py" ]
+
