@@ -54,12 +54,16 @@ class VectorDBRequest(BaseModel):
     mode: Optional[str]
     vectorDB_type: Optional[str] = "Weaviate"
     file_path: Optional[str] = None
+    file_title: Optional[str] = None
 
 class ArxivInput(BaseModel):
-    username: str 
-    class_name: Optional[str]
-    query: Optional[str]
-    paper_limit: Optional[int]
-    recursive_mode: Optional[int] 
+    username: Optional[str]
+    class_name: Optional[str] = None
+    query: Optional[str] = None
+    paper_limit: Optional[int] = None
+    recursive_mode: Optional[int] = None
     mode: Optional[str]
+    title: Optional[str] = None
+    url: Optional[str] = None
     file_path: Optional[str] = None
+    dir_name: Optional[str] = None

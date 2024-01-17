@@ -44,12 +44,13 @@ router = APIRouter()
 
 
 @router.post("/")
-async def query_vectorDB( class_name: str = Form(...),
+async def query_vectorDB(class_name: str = Form(...),
                           mode: str = Form(...),
                           vectorDB_type: str = Form("Weaviate"),
                           file_path: Optional[str] = Form(None),
                           current_user: User = Depends(get_current_active_user),
-                          file: Optional[UploadFile] = File(None)):
+                          file: Optional[UploadFile] = File(None),
+                          file_title: Optional[str] = Form(None)):
     try:
         print(f"received data: {class_name}, {mode}, {vectorDB_type}, {file_path}, {current_user.username}")
         print(f"Received file: {file.filename if file else 'No file'}")
@@ -80,7 +81,8 @@ async def query_vectorDB( class_name: str = Form(...),
             "class_name": class_name,
             "mode": mode,
             "vectorDB_type": vectorDB_type,
-            "file_path": file_path
+            "file_path": file_path,
+            "file_title": file_title,
         }
         # Send the request to the external service
         response = requests.post(f"{Ray_service_URL}/VectorDB", json=data_dict)

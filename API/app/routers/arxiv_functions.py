@@ -44,17 +44,22 @@ Ray_service_URL = config.get("Ray_service_URL")
 router = APIRouter()
 
 @router.post("/")
-async def query_arxiv_search(data: str = Form(...), 
-                         file: Optional[UploadFile] = File(None),
-                         current_user: User = Depends(get_current_active_user),
-                        ):
-
+async def query_arxiv_search(class_name: str = Form(None),
+                            query: str = Form(None),
+                            paper_limit: int = Form(None),
+                            recursive_mode: int = Form(None),
+                            mode: str = Form(...),
+                            title: str = Form(None),
+                            url: str = Form(None),
+                            file_path: Optional[str] = Form(None),
+                            dir_name: Optional[str] = Form(None),
+                            current_user: User = Depends(get_current_active_user),
+                            file: Optional[UploadFile] = File(None)):
+    print('checkpoint api 1')
+    print('data received 1', 'cls name', class_name, 'mode', mode, 'query', query, 'recursive mode', recursive_mode, 'paper limit', paper_limit, 'file path', file_path, 'ursername', current_user.username, 'title', title, 'url', url)
+    username = current_user.username
     try:
-        print('data received', data)
-        print('file received', file)
-        data_dict = json.loads(data)
-        vector_db_request = parse_raw_as(ArxivInput, json.dumps(data_dict))
-        vector_db_request.username = current_user.username
+        print('data received', class_name, mode, query, recursive_mode, paper_limit, file_path, current_user.username)
         if file:
             # Create a random directory for the file
             random_dir = secrets.token_hex(8)  # Generates a random 16-character string
@@ -73,17 +78,36 @@ async def query_arxiv_search(data: str = Form(...),
                     for zip_info in zip_ref.infolist():
                         if not zip_info.filename.startswith('__MACOSX/'):
                             zip_ref.extract(zip_info, file_dir)
+            file_path = file_dir
+        if url:
+            random_dir = secrets.token_hex(8)  # Generates a random 16-character string
+            file_dir = os.path.join(received_files_dir, random_dir)
+            os.makedirs(file_dir, exist_ok=True)
+            dir_name = file_dir
+            print('dir name', dir_name)
 
-            # Update the file path in the request data
-            #data.file_path = file_dir
-        #else:
-            #data.file_path = None
-            vector_db_request.file_path = file_dir
+        data_dict = {
+            "username": username,
+            "class_name": class_name,
+            "query": query,
+            "paper_limit": paper_limit,
+            "recursive_mode": recursive_mode,
+            "mode": mode,
+            "title": title,
+            "url": url,            
+            "file_path": file_path,
+            "dir_name": dir_name
+        }
         
-        print(f"Received data: {vector_db_request.dict()}")  # Debug print
-        response = requests.post(f"{Ray_service_URL}/ArxivSearch/", json=vector_db_request.dict())
-        #response.raise_for_status()  # Raises an HTTPError for unsuccessful status codes
+        #print(f"Received data: {vector_db_request.dict()}")  # Debug print
+        response = requests.post(f"{Ray_service_URL}/ArxivSearch/", json=data_dict)
+        response.raise_for_status()  # Raises an HTTPError for unsuccessful status codes
         response_data = response.json()
         return {"username": current_user.username, "response": response_data}
+    except requests.HTTPError as e:
+        if response.status_code == 400:
+            raise HTTPException(status_code=400, detail="Bad request to the other API service.")
+        else:
+            raise HTTPException(status_code=500, detail=f"Failed to forward request to the other API service. Error: {e}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {e}")
