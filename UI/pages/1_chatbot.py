@@ -287,10 +287,9 @@ else:
                     retrieve_from_db = json.loads(selected_value)
                     retrieved_messages = messages_from_dict(retrieve_from_db)
                     history.add_message(retrieved_messages)
-                    st.text(history.messages)
+                    #st.text(history.messages)
                     for msg in history.messages:
                         len_message = len(msg)
-                        
                         for agent in range(0, len_message-1): 
                             st.chat_message(msg[agent].type).write(msg[agent].content)
 
