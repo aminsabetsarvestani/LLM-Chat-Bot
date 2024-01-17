@@ -1,4 +1,4 @@
-from backend import PredictDeployment
+from backend_hfTextGen import PredictDeployment
 from backend_vectordatabase import VectorDataBase
 from backend_arxiv_search import ArxivSearch
 from ray import serve
@@ -21,8 +21,7 @@ vdb_deployment_options = {
 }
 
 serve.run(VectorDataBase.bind(), name = "VectorDB" ,route_prefix="/VectorDB")
-
-#serve.run(ArxivSearch.bind(), name = "ArxivSearch" ,route_prefix="/ArxivSearch")
+serve.run(ArxivSearch.bind(), name = "ArxivSearch" ,route_prefix="/ArxivSearch")
 
 for LLM in config.LLMs:
     print("--------------->  Deploying LLMs")
@@ -42,7 +41,7 @@ for LLM in config.LLMs:
             "max_concurrent_queries": LLM["max_concurrent_queries"],
         }
     }
-    # Apply the deployment options to the PredictDeployment class
+     # Apply the deployment options to the PredictDeployment class
     PredictDeployment = PredictDeployment.options(**deployment_options)
-    # Deploy the service with the specified model_id and other parameters
+    #Deploy the service with the specified model_id and other parameters
     serve.run(PredictDeployment.bind(model_id, LLM["temperature"], LLM["max_new_tokens"], LLM["repetition_penalty"], LLM["batch_size"]), name = LLM["name"], route_prefix=f"/{prefix}")

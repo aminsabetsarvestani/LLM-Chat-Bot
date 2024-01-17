@@ -45,6 +45,7 @@ class VDBaseInput(BaseModel):
     mode: Optional[str]
     vectorDB_type: Optional[str] = "Weaviate"
     file_path: Optional[str] = None
+    file_title: Optional[str] = None
 
 
 
@@ -124,13 +125,37 @@ class VectorDataBase:
         self.logger.propagate = True
 
     def weaviate_serialize_document(self,doc):
+        '''
+        Description:
+            Serializes a document for storage in Weaviate. It extracts the title from the document's metadata and combines it with the page content.
+
+        Parameters:
+
+            doc (Document): The document to be serialized.
+
+        Returns:
+
+            dict: A dictionary containing the serialized content of the document, including its title and page content.
+        '''
         document_title = doc.metadata.get('source', '').split('/')[-1]
         return {
             "page_content": doc.page_content,
             "document_title": document_title,
         }
     
-    def weaviate_split_multiple_pdf(self,docs):    
+    def weaviate_split_multiple_pdf(self,docs):   
+        '''
+        Description:
+            Splits multiple PDF documents into chunks for easier processing and storage. This function uses a recursive character text splitter to create smaller, manageable text documents.
+
+        Parameters:
+
+            docs (list): A list of document objects to be split.
+
+        Returns:
+
+            list: A list of serialized document chunks.
+        ''' 
         #text_splitter = CharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
         text_docs = text_splitter.split_documents(docs)
@@ -142,6 +167,19 @@ class VectorDataBase:
         return serialized_docs	
 
     def divide_workload(self, num_actors, documents):
+        '''
+        Description:
+            Divides a list of documents among a specified number of actors (processes or threads) to parallelize processing.
+
+        Parameters:
+
+            num_actors (int): The number of Ray actors (processes/threads) among which the workload will be divided.
+            documents (list): A list of documents to be divided.
+
+        Returns:
+
+            list: A list of document lists, where each sublist corresponds to the documents assigned to one actor.
+        '''
         docs_per_actor = len(documents) // num_actors
 
         doc_parts = [documents[i * docs_per_actor: (i + 1) * docs_per_actor] for i in range(num_actors)]
@@ -152,6 +190,18 @@ class VectorDataBase:
         return doc_parts
 
     def parse_pdf(self, directory):    
+        '''
+        Description:
+           Parses all PDF and text files in a given directory, creating a list of documents. It uses different loaders for PDF and text files and handles errors by skipping problematic files.
+
+        Parameters:
+
+            directory (str): The path to the directory containing PDF and text files.
+
+        Returns:
+
+            list: A list of document objects parsed from the files in the specified directory.
+        '''
         documents = []
         for file in os.listdir(directory):
             if file.endswith('.pdf'):
@@ -173,12 +223,27 @@ class VectorDataBase:
         return documents
 
     def process_all_docs(self, dir, username, cls):
+        '''
+        Description:
+            Processes all documents in a specified directory, serializes them, and adds them to Weaviate. Handles both small and large document sets by splitting the workload for efficient processing.
+
+        Parameters:
+
+            dir (str): Directory containing the documents to be processed.
+            username (str): The username of the user processing the documents.
+            cls (str): The class name for the documents in Weaviate.
+
+        Returns:
+
+            dict: A response indicating the status of the processing ('success' or 'error') and a message detailing the outcome.
+        '''
+
         response = {"status": "initiated", "message": ""}
         try:
             full_class = str(username) + "_" + str(cls)
             document_list = self.parse_pdf(dir)
             serialized_docs = self.weaviate_split_multiple_pdf(document_list)
-            if len(serialized_docs) <= 160:
+            if len(serialized_docs) <= 30:
                 self.add_weaviate_document(full_class, serialized_docs)
                 response["status"] = "success"
                 response["message"] = f"Processed {len(serialized_docs)} documents for class {full_class}."
@@ -195,10 +260,28 @@ class VectorDataBase:
             return response
 
     def add_weaviate_document(self, cls, docs):
+        '''
+        Description:
+            Adds a list of serialized documents to Weaviate under a specified class. Uses a remote WeaviateEmbedder actor for the operation.
+
+        Parameters:
+
+            cls (str): The class name under which the documents will be added.
+            docs (list): A list of serialized documents to be added.
+        '''
         actor = WeaviateEmbedder.remote()
         ray.get([actor.adding_weaviate_document.remote(docs, str(cls))])
 
     def add_weaviate_batch_documents(self, cls, doc_workload):
+        '''
+        Description:
+            Adds documents to Weaviate in batches using multiple WeaviateEmbedder actors. This method is used for efficient processing of larger sets of documents.
+
+        Parameters:
+
+            cls (str): The class name under which the documents will be added.
+            doc_workload (list): A list of document batches to be added, where each sublist is a separate batch.
+        '''
         actors = [WeaviateEmbedder.remote() for _ in range(3)]
         self.logger.info(f"actors creation successful {actors}: %s", )
         [actor.adding_weaviate_document.remote(doc_part, str(cls)) for actor, doc_part in zip(actors, doc_workload)]
@@ -207,7 +290,19 @@ class VectorDataBase:
 
 
     def add_vdb_class(self,username, class_name,):
+        '''
+        Description:
+            Creates a new class in the Weaviate database with the specified name and username. It also adds the class to the internal database.
 
+        Parameters:
+
+            username (str): The username associated with the new class.
+            class_name (str): The name of the new class to be created.
+
+        Returns:
+
+            dict: A response indicating the outcome ('success' or 'error') and relevant messages.
+        '''
         try:            
                 weaviate_client = weaviate.Client("http://localhost:8080")
                 self.logger.info("checkpoint 1")
@@ -258,6 +353,19 @@ class VectorDataBase:
 
 
     def delete_weaviate_class(self, username, class_name):
+            '''
+            Description:
+                Deletes a specified class from the Weaviate database and the internal database.
+
+            Parameters:
+
+                username (str): The username associated with the class to be deleted.
+                class_name (str): The name of the class to be deleted.
+
+            Returns:
+
+                dict: A response indicating the outcome ('success' or 'error') and relevant messages
+            '''
             try: 
                 weaviate_client = weaviate.Client("http://localhost:8080")
                 username = username
@@ -272,8 +380,43 @@ class VectorDataBase:
             except Exception as e:
                 return {"error": str(e)}
 
+    def delete_weaviate_document(self, name, cls_name):
+        '''
+        Description:
+            Deletes a document from Weaviate based on its title and class name.
+
+        Parameters:
+
+            name (str): The title of the document to be deleted.
+            cls_name (str): The class name under which the document is stored in Weaviate.
+        '''
+        try:
+            document_name = str(name)
+            self.weaviate_client.batch.delete_objects(
+                class_name=cls_name,
+                where={
+                    "path": ["document_title"],
+                    "operator": "Like",
+                    "valueText": document_name,
+                }
+            )
+        except Exception as e:
+                return {"error": str(e)}
 
     def query_weaviate_document_names(self, username, class_name):
+        '''
+        Description:
+            Queries the Weaviate database for the titles of all documents in a specified class.
+
+        Parameters:
+
+            username (str): The username associated with the class.
+            class_name (str): The class name for which document titles are queried.
+
+        Returns:
+
+            list/dict: A list of document titles found, or an error message if no documents are found or an error occurs.
+        '''
         try:
             weaviate_client = weaviate.Client("http://localhost:8080")
             prefix = username
@@ -335,7 +478,12 @@ class VectorDataBase:
                     self.logger.info(f"collection delete: {response}: %s", )
                     return response
                 elif request.mode == "delete_document":
-                    self.delete_weaviate_document(request.data, request.collection_name)
+                    username = request.username
+                    class_name = request.class_name
+                    full_class_name = str(username) + "_" + str(class_name)
+                    self.logger.info(f"checking the request/ {request}: and file title {request.file_title}")
+                    response = self.delete_weaviate_document(request.file_title, full_class_name)
+                    return response
                 elif request.mode == "create_collection":
                     self.logger.info(f"checking the request/ {request}: %s", )
                     response = self.add_vdb_class(request.username, request.class_name)

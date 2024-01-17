@@ -1,0 +1,4 @@
+time="2024-01-12T15:59:54Z" level=warning msg="Found orphan containers ([llmapi-text-generation-1 llmapi-t2v-transformers-1 llmapi-weaviate-1]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container llmapi-text-generation-inference-1  Created
+ Container llmapi-text-generation-inference-1  Starting
+ Container llmapi-text-generation-inference-1  Started
