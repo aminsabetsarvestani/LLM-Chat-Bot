@@ -8,7 +8,7 @@
 
 # LLM-as-a-Service Setup Guide
 
-This guide provides the steps to set up and run the LLM-as-a-Service on your machine.
+This  guide provides the steps to set up and run the LLM-as-a-Service on your machine.
 
 ## Prerequisites
 
