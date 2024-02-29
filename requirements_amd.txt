@@ -1,0 +1,23 @@
+torch --index-url https://download.pytorch.org/whl/rocm5.7
+torchvision --index-url https://download.pytorch.org/whl/rocm5.7
+torchaudio --index-url https://download.pytorch.org/whl/rocm5.7
+ray[data,train,tune,serve]
+langchain
+fastapi
+wandb
+eschercloud
+SQLAlchemy
+passlib
+accelerate
+sentencepiece
+einops
+streamlit
+python-dotenv
+transformers
+scipy
+python-jose
+python-multipart
+weaviate-client
+asyncio
+threaded
+langchain-community

@@ -12,7 +12,7 @@ from typing import Optional
 import pathlib
 from sqlalchemy.orm import Session
 from app.database import get_db
-from pydantic import BaseModel, parse_raw_as
+from pydantic import BaseModel
 import weaviate
 import logging
 import json

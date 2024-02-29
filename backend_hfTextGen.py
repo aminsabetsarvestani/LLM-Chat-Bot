@@ -1,7 +1,6 @@
 from langchain.chains.conversation.memory import ConversationBufferMemory
 from ray import serve
 from langchain.embeddings import HuggingFaceInstructEmbeddings
-from langchain.vectorstores import Chroma
 import json
 import re
 from langchain.memory import ConversationTokenBufferMemory

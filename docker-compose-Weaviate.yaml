@@ -24,13 +24,13 @@ services:
       CLUSTER_HOSTNAME: 'node1'
   t2v-transformers:
     image: semitechnologies/transformers-inference:sentence-transformers-paraphrase-multilingual-MiniLM-L12-v2
-    environment:
-      ENABLE_CUDA: '1'
-      NVIDIA_VISIBLE_DEVICES: 'all'
-    deploy:
-      resources:
-        reservations:
-          devices:
-          - capabilities:
-            - 'gpu'
+    # environment:
+    #   ENABLE_CUDA: '1'
+    #   NVIDIA_VISIBLE_DEVICES: 'all'
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #       - capabilities:
+    #         - 'gpu'
 ...
