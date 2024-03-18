@@ -15,14 +15,14 @@ import weaviate
 from langchain.vectorstores import Weaviate
 from langchain.text_splitter import CharacterTextSplitter
 import yaml
-from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import TextLoader
 from fastapi import FastAPI, HTTPException, UploadFile, File, Depends
 from typing import Optional
 from pydantic import BaseModel
 from backend_database import Database
 import os
 import logging
-from langchain.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 

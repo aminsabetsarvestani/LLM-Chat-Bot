@@ -1,16 +1,16 @@
-version: '3'
+version: '3.8'
+
 services:
   text-generation-inference:
-    image: ghcr.io/huggingface/text-generation-inference:1.3
-    command: --model-id meta-llama/Llama-2-7b-chat-hf --max-input-length 2048 --max-total-tokens 4096 
-    environment:
-      - HUGGING_FACE_HUB_TOKEN=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
+    image: ghcr.io/huggingface/text-generation-inference:1.4-rocm
     ports:
       - "8082:80"
     volumes:
-      - data:/data
-    runtime: nvidia  # Use this line for GPU support
+      - "/data:/data"
+    devices:
+      - "/dev/kfd:/dev/kfd"
+      - "/dev/dri:/dev/dri"
     shm_size: 1g
-
-volumes:
-  data:
+    environment:
+      - HUGGING_FACE_HUB_TOKEN=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
+    command: "--model-id meta-llama/Llama-2-7b-chat-hf"

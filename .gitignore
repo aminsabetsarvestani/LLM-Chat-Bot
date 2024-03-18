@@ -1,0 +1,42 @@
+# Python related files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Dependency directories
+venv/
+env/
+bin/
+lib/
+include/
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python log files
+*.log
+logs/
+*.logs
+
+# Compiled Python files
+*.pyc
+
+# Database files
+*.db
+
+# AI model weights
+*.h5
+*.pth
+*.ckpt
+
+# Data directory
+data/*
+wandb/*
+docs/*

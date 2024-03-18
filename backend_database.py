@@ -104,7 +104,6 @@ class Database:
 
     def update_conversation(self, input):
         user = self.db.query(User).filter(User.username == input["username"]).first()
-
         if not user:
             self.db.close()
             return {f"User {input['username']} not found"}

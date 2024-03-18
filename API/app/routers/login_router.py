@@ -4,7 +4,6 @@ from fastapi.security import OAuth2PasswordRequestForm
 from app.models import Token
 from app.services.authentication import authenticate_user, create_access_token
 from datetime import timedelta
-import os
 from sqlalchemy.orm import Session
 from app.logging_config import setup_logger  # Logging setup
 from app.database import get_db
@@ -14,7 +13,7 @@ import pathlib
 #from app.logging_config import setup_logger
 
 
-current_path = pathlib.Path(__file__).parent
+current_path = pathlib.Path(__file__)
 
 config_path = current_path.parent.parent.parent / 'cluster_conf.yaml'
 # Environment and DB setup

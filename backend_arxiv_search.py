@@ -63,7 +63,7 @@ from langchain.vectorstores import Weaviate
 from langchain.text_splitter import CharacterTextSplitter
 import yaml
 import time
-from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import TextLoader
 from fastapi import FastAPI, HTTPException, UploadFile, File, Depends
 from typing import Optional
 from pydantic import BaseModel

@@ -16,7 +16,7 @@ import pathlib
 #from app.logging_config import setup_logger
 import yaml
 
-current_path = pathlib.Path(__file__).parent
+current_path = pathlib.Path(__file__)
 
 config_path = current_path.parent.parent.parent / 'cluster_conf.yaml'
 

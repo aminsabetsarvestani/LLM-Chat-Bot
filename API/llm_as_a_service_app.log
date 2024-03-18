@@ -82,3 +82,12 @@
 2024-01-17 09:36:39,286 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user user3
 2024-01-17 09:36:39,286 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user user3
 2024-01-17 09:36:39,286 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user user3
+2024-03-15 14:56:16,237 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-15 14:56:16,237 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-15 14:56:16,237 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-15 17:12:05,032 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-15 17:12:05,032 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-15 17:12:05,032 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-18 13:39:02,966 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-18 13:39:02,966 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-18 13:39:02,966 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin

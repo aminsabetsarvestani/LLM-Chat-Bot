@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends, Form, HTTPException, UploadFile, File, Security
-from app.models import VectorDBRequest,LoginUser
 from app.depencencies.security import get_current_active_user
 from app.depencencies.security import get_current_active_user
 from app.database import User
@@ -10,15 +9,11 @@ import secrets
 import zipfile
 from typing import Optional
 import pathlib
-from sqlalchemy.orm import Session
-from app.database import get_db
-from pydantic import BaseModel
-import weaviate
 import logging
-import json
+
 
 # Load environment variables and setup
-current_path = pathlib.Path(__file__).parent
+current_path = pathlib.Path(__file__)
 config_path = current_path.parent.parent.parent / 'cluster_conf.yaml'
 received_files_dir = os.path.join(current_path.parent.parent.parent, 'received_files')
 os.makedirs(received_files_dir, exist_ok=True)

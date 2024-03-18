@@ -3,15 +3,10 @@ from app.models import  InferenceRequest
 from app.depencencies.security import get_current_active_user
 from app.database import User
 import requests
-from dotenv import load_dotenv
-import os
 import yaml
-
 import pathlib
-#from app.logging_config import setup_logger
 import yaml
-
-current_path = pathlib.Path(__file__).parent
+current_path = pathlib.Path(__file__)
 
 config_path = current_path.parent.parent.parent / 'cluster_conf.yaml'
 # Environment and DB setup

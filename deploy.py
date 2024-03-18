@@ -1,8 +1,9 @@
 from backend_hfTextGen import PredictDeployment
-from backend_vectordatabase import VectorDataBase
-from backend_arxiv_search import ArxivSearch
+#from backend_vectordatabase import VectorDataBase
+#from backend_arxiv_search import ArxivSearch
 from ray import serve
 import yaml
+import ray
 
 
 
@@ -20,8 +21,8 @@ vdb_deployment_options = {
     
 }
 
-serve.run(VectorDataBase.bind(), name = "VectorDB" ,route_prefix="/VectorDB")
-serve.run(ArxivSearch.bind(), name = "ArxivSearch" ,route_prefix="/ArxivSearch")
+#serve.run(VectorDataBase.bind(), name = "VectorDB" ,route_prefix="/VectorDB")
+#serve.run(ArxivSearch.bind(), name = "ArxivSearch" ,route_prefix="/ArxivSearch")
 
 for LLM in config.LLMs:
     print("--------------->  Deploying LLMs")

@@ -1,6 +1,6 @@
 from langchain.chains.conversation.memory import ConversationBufferMemory
 from ray import serve
-from langchain.embeddings import HuggingFaceInstructEmbeddings
+from langchain_community.embeddings import HuggingFaceInstructEmbeddings
 import json
 import re
 from langchain.memory import ConversationTokenBufferMemory
@@ -11,7 +11,7 @@ from fastapi import FastAPI
 from langchain.chains import RetrievalQA
 import logging
 from starlette.responses import StreamingResponse
-from langchain.vectorstores import Weaviate
+from langchain_community.vectorstores import Weaviate
 import weaviate
 import wandb
 from backend_database import Database
@@ -25,12 +25,12 @@ import yaml
 import time
 import asyncio
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-from langchain.llms import HuggingFaceTextGenInference
+from langchain_community.llms import HuggingFaceTextGenInference
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
-from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
+from langchain_community.llms import HuggingFacePipeline
 
 from langchain.chains import ConversationChain
 from langchain.chains import LLMChain
@@ -83,6 +83,8 @@ class PredictDeployment:
         from langchain.chains import RetrievalQA
         from langchain import PromptTemplate
         from langchain.vectorstores import Weaviate
+        self.logger = logging.getLogger(__name__)
+        self.logger.propagate = True
 
         # class initialization
         try:
@@ -91,6 +93,7 @@ class PredictDeployment:
             )
         except:
             self.logger.error("Error in connecting to Weaviate")
+            self.RAG_enabled = False
         self.model_id = model_id
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
@@ -186,24 +189,24 @@ class PredictDeployment:
             input_variables=["chat_history", "user_input"], template=self.template
         )
 
-        self.embeddings = HuggingFaceInstructEmbeddings(
-            model_name="hkunlp/instructor-xl", model_kwargs={"device": "cuda"}
-        )
-
-        self.weaviate_vectorstore = Weaviate(
-            self.weaviate_client, 
-            "Admin_General_collection",
-            'page_content', 
-            attributes=['page_content']
-        )
-        # self.vectorstore_video = Chroma("YouTube_store", persist_directory=video_persist_directory, embedding_function=self.embeddings)
-        self.QA_document = RetrievalQA.from_chain_type(
-            llm=self.llm,
-            chain_type="stuff",
-            retriever=self.weaviate_vectorstore.as_retriever(),
-            memory=self.memory,
-            output_key="output",
-        )
+        # self.embeddings = HuggingFaceInstructEmbeddings(
+        #     model_name="hkunlp/instructor-xl", model_kwargs={"device": "cuda"}
+        # )
+        if self.RAG_enabled:
+            self.weaviate_vectorstore = Weaviate(
+                self.weaviate_client, 
+                "Admin_General_collection",
+                'page_content', 
+                attributes=['page_content']
+            )
+            # self.vectorstore_video = Chroma("YouTube_store", persist_directory=video_persist_directory, embedding_function=self.embeddings)
+            self.QA_document = RetrievalQA.from_chain_type(
+                llm=self.llm,
+                chain_type="stuff",
+                retriever=self.weaviate_vectorstore.as_retriever(),
+                memory=self.memory,
+                output_key="output",
+            )
 
         # self.QA_video = RetrievalQA.from_chain_type(llm=self.llm, chain_type="stuff", retriever=self.vectorstore_video.as_retriever(),memory = self.memory,output_key= "output")
         self.database = Database()
