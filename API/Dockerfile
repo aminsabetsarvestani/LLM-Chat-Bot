@@ -10,7 +10,8 @@ RUN apt-get update && \
 
 # Set the working directory in the container
 WORKDIR /app
-
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 # Copy the Python script into the container
 COPY . .
 

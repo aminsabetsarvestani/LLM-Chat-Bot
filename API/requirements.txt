@@ -1,0 +1,19 @@
+langchain-community
+pydantic
+fastapi
+starlette
+langchain
+sqlalchemy
+passlib
+weaviate-client
+wandb
+langchain
+transformers
+text_generation
+uvicorn
+python-dotenv
+python-jose
+python-multipart
+torch --index-url https://download.pytorch.org/whl/rocm5.7
+torchvision --index-url https://download.pytorch.org/whl/rocm5.7
+torchaudio --index-url https://download.pytorch.org/whl/rocm5.7

@@ -1,0 +1,52 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.12
+    cli_version: 0.16.4
+    framework: huggingface
+    huggingface_version: 4.39.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1711385774.0
+    t:
+      1:
+      - 1
+      - 11
+      - 49
+      - 55
+      - 86
+      - 93
+      - 105
+      2:
+      - 1
+      - 11
+      - 49
+      - 55
+      - 86
+      - 93
+      - 105
+      3:
+      - 7
+      - 23
+      4: 3.10.12
+      5: 0.16.4
+      6: 4.39.0
+      8:
+      - 5
+      - 9
+      13: linux-x86_64
+    m:
+    - 1: The number of input tokens
+      6:
+      - 3
+    - 1: The number of generated tokens
+      6:
+      - 3
+    - 1: Inference Time
+      6:
+      - 3
+    - 1: token/second
+      6:
+      - 3

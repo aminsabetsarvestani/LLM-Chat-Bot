@@ -64,6 +64,7 @@ class Conversation(Base):
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base.metadata.create_all(bind=engine)
+
 with SessionLocal() as db:
     admin_username =  config.get("admin_username","admin")
     admin_password = config.get("admin_password","admin")

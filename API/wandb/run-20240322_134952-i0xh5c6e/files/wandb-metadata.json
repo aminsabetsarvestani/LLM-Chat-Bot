@@ -1,0 +1,194 @@
+{
+    "os": "Linux-5.15.0-101-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-03-22T13:49:53.474145",
+    "startedAt": "2024-03-22T13:49:52.676856",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/app/run_api.py",
+    "codePathLocal": "run_api.py",
+    "codePath": "run_api.py",
+    "host": "amin-dev-mi210",
+    "username": "root",
+    "executable": "/usr/bin/python",
+    "cpu_count": 32,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 2550.0,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 457.74768447875977,
+            "used": 419.95933532714844
+        }
+    },
+    "memory": {
+        "total": 251.69288635253906
+    }
+}

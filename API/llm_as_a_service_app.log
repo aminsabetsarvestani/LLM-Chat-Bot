@@ -1,93 +1,304 @@
-2024-01-12 15:41:46,707 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-12 15:41:46,707 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-12 15:41:46,707 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-12 15:42:07,862 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
-2024-01-12 15:42:07,862 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
-2024-01-12 15:42:07,862 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
-2024-01-15 12:36:14,785 - llm_as_a_service_logger - WARNING - login_for_access_token: Invalid credentials for user test
-2024-01-15 12:36:14,785 - llm_as_a_service_logger - WARNING - login_for_access_token: Invalid credentials for user test
-2024-01-15 12:36:14,785 - llm_as_a_service_logger - WARNING - login_for_access_token: Invalid credentials for user test
-2024-01-15 12:36:15,948 - llm_as_a_service_logger - WARNING - login_for_access_token: Invalid credentials for user test
-2024-01-15 12:36:15,948 - llm_as_a_service_logger - WARNING - login_for_access_token: Invalid credentials for user test
-2024-01-15 12:36:15,948 - llm_as_a_service_logger - WARNING - login_for_access_token: Invalid credentials for user test
-2024-01-15 12:36:20,777 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
-2024-01-15 12:36:20,777 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
-2024-01-15 12:36:20,777 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amin
-2024-01-15 14:12:10,122 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 14:12:10,122 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 14:12:10,122 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 14:12:34,935 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:12:34,935 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:12:34,935 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:26:44,885 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:26:44,885 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:26:44,885 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:31:04,889 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:31:04,889 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:31:04,889 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:32:00,212 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:32:00,212 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:32:00,212 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:45:20,210 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:45:20,210 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:45:20,210 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:45:20,489 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:45:20,489 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 14:45:20,489 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user test
-2024-01-15 16:38:40,824 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 16:38:40,824 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 16:38:40,824 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 16:39:01,557 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:39:01,557 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:39:01,557 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:39:01,815 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:39:01,815 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:39:01,815 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:57:31,097 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:57:31,097 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:57:31,097 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:57:52,631 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:57:52,631 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 16:57:52,631 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user amir
-2024-01-15 17:03:57,732 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 17:03:57,732 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 17:03:57,732 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-15 17:04:12,216 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:04:12,216 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:04:12,216 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:05:52,533 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:05:52,533 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:05:52,533 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:06:50,431 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:06:50,431 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:06:50,431 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:14:50,871 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:14:50,871 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-15 17:14:50,871 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:15:49,840 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:15:49,840 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:15:49,840 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:37:01,875 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:37:01,875 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:37:01,875 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:54:46,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:54:46,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-16 13:54:46,736 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-17 09:27:40,390 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-17 09:27:40,390 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-17 09:27:40,390 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user 2
-2024-01-17 09:36:16,676 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-17 09:36:16,676 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-17 09:36:16,676 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-01-17 09:36:39,286 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user user3
-2024-01-17 09:36:39,286 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user user3
-2024-01-17 09:36:39,286 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user user3
-2024-03-15 14:56:16,237 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-15 14:56:16,237 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-15 14:56:16,237 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-15 17:12:05,032 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-15 17:12:05,032 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-15 17:12:05,032 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-18 13:39:02,966 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-18 13:39:02,966 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
-2024-03-18 13:39:02,966 - llm_as_a_service_logger - INFO - login_for_access_token: valid credentials for user admin
+2024-03-25 16:15:58,190 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:15:58,190 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:15:58,190 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:15:58,190 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:16:08,599 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,599 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,599 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,599 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,599 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,599 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,600 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,600 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,600 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,600 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,600 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,600 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:16:08,601 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:16:08,601 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:16:08,601 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:16:08,601 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:16:08,601 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:16:08,601 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:16:08,610 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f9804176860>
+2024-03-25 16:16:08,610 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f9804176860>
+2024-03-25 16:16:08,610 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f9804176860>
+2024-03-25 16:16:08,610 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f9804176860>
+2024-03-25 16:16:08,610 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f9804176860>
+2024-03-25 16:16:08,610 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7f9804176860>
+2024-03-25 16:16:08,614 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:16:08,614 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:16:08,614 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:16:08,614 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:16:08,614 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:16:08,614 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:16:08,616 - llm_as_a_service_logger - ERROR - Error processing the request: 'content'
+2024-03-25 16:16:08,616 - llm_as_a_service_logger - ERROR - Error processing the request: 'content'
+2024-03-25 16:16:08,616 - llm_as_a_service_logger - ERROR - Error processing the request: 'content'
+2024-03-25 16:16:08,616 - llm_as_a_service_logger - ERROR - Error processing the request: 'content'
+2024-03-25 16:16:08,616 - llm_as_a_service_logger - ERROR - Error processing the request: 'content'
+2024-03-25 16:16:08,616 - llm_as_a_service_logger - ERROR - Error processing the request: 'content'
+2024-03-25 16:26:03,518 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:03,518 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:03,518 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:03,518 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:09,234 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:09,234 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:09,234 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:09,234 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:35,781 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:35,781 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:35,781 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:26:35,781 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:11,451 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:11,451 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:11,451 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:11,451 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:23,737 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:23,737 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:23,737 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:23,737 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:29,703 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:29,703 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:29,703 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:29,703 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:57,489 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:57,489 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:57,489 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:27:57,489 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:08,756 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:08,756 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:08,756 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:08,756 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:14,481 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:14,481 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:14,481 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:14,481 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:20,082 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:20,082 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:20,082 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:20,082 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:25,474 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:25,474 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:25,474 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:25,474 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:28:31,134 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,134 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,134 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,134 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,134 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,134 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:28:31,135 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:28:31,144 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff50a06a6b0>
+2024-03-25 16:28:31,144 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff50a06a6b0>
+2024-03-25 16:28:31,144 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff50a06a6b0>
+2024-03-25 16:28:31,144 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff50a06a6b0>
+2024-03-25 16:28:31,144 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff50a06a6b0>
+2024-03-25 16:28:31,144 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff50a06a6b0>
+2024-03-25 16:28:31,148 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:28:31,148 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:28:31,148 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:28:31,148 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:28:31,148 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:28:31,148 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:28:31,150 - llm_as_a_service_logger - ERROR - Error processing the request: the JSON object must be str, bytes or bytearray, not dict
+2024-03-25 16:28:31,150 - llm_as_a_service_logger - ERROR - Error processing the request: the JSON object must be str, bytes or bytearray, not dict
+2024-03-25 16:28:31,150 - llm_as_a_service_logger - ERROR - Error processing the request: the JSON object must be str, bytes or bytearray, not dict
+2024-03-25 16:28:31,150 - llm_as_a_service_logger - ERROR - Error processing the request: the JSON object must be str, bytes or bytearray, not dict
+2024-03-25 16:28:31,150 - llm_as_a_service_logger - ERROR - Error processing the request: the JSON object must be str, bytes or bytearray, not dict
+2024-03-25 16:28:31,150 - llm_as_a_service_logger - ERROR - Error processing the request: the JSON object must be str, bytes or bytearray, not dict
+2024-03-25 16:29:11,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:29:11,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:29:11,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:29:11,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:29:14,868 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,868 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,868 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,868 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,868 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,868 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:29:14,869 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:29:14,872 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fae07e7a6e0>
+2024-03-25 16:29:14,872 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fae07e7a6e0>
+2024-03-25 16:29:14,872 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fae07e7a6e0>
+2024-03-25 16:29:14,872 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fae07e7a6e0>
+2024-03-25 16:29:14,872 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fae07e7a6e0>
+2024-03-25 16:29:14,872 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fae07e7a6e0>
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Error processing the request: Expecting value: line 1 column 1 (char 0)
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Error processing the request: Expecting value: line 1 column 1 (char 0)
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Error processing the request: Expecting value: line 1 column 1 (char 0)
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Error processing the request: Expecting value: line 1 column 1 (char 0)
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Error processing the request: Expecting value: line 1 column 1 (char 0)
+2024-03-25 16:29:14,874 - llm_as_a_service_logger - ERROR - Error processing the request: Expecting value: line 1 column 1 (char 0)
+2024-03-25 16:30:04,153 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:04,153 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:04,153 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:04,153 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:42,352 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:42,352 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:42,352 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:42,352 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:47,889 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:47,889 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:47,889 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:47,889 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:58,991 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:58,991 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:58,991 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:30:58,991 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:31:04,718 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:31:04,718 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:31:04,718 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:31:04,718 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:32:30,463 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:32:30,463 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:32:30,463 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:32:30,463 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:03,864 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:03,864 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:03,864 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:03,864 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:14,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:14,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:14,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:14,992 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:20,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:20,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:20,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:20,455 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:25,885 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:25,885 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:25,885 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:25,885 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,467 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:33:31,468 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:33:31,468 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:33:31,468 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:33:31,468 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:33:31,468 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:33:31,468 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:33:31,475 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fbfa55ae650>
+2024-03-25 16:33:31,475 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fbfa55ae650>
+2024-03-25 16:33:31,475 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fbfa55ae650>
+2024-03-25 16:33:31,475 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fbfa55ae650>
+2024-03-25 16:33:31,475 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fbfa55ae650>
+2024-03-25 16:33:31,475 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7fbfa55ae650>
+2024-03-25 16:33:31,479 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:33:31,479 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:33:31,479 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:33:31,479 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:33:31,479 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:33:31,479 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:33:31,481 - llm_as_a_service_logger - ERROR - Error processing the request: local variable 'chat_history' referenced before assignment
+2024-03-25 16:33:31,481 - llm_as_a_service_logger - ERROR - Error processing the request: local variable 'chat_history' referenced before assignment
+2024-03-25 16:33:31,481 - llm_as_a_service_logger - ERROR - Error processing the request: local variable 'chat_history' referenced before assignment
+2024-03-25 16:33:31,481 - llm_as_a_service_logger - ERROR - Error processing the request: local variable 'chat_history' referenced before assignment
+2024-03-25 16:33:31,481 - llm_as_a_service_logger - ERROR - Error processing the request: local variable 'chat_history' referenced before assignment
+2024-03-25 16:33:31,481 - llm_as_a_service_logger - ERROR - Error processing the request: local variable 'chat_history' referenced before assignment
+2024-03-25 16:34:05,099 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:05,099 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:05,099 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:05,099 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:11,418 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:11,418 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:11,418 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:11,418 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:34:19,762 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,762 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,762 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,762 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,762 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,762 - llm_as_a_service_logger - INFO - Received request by router: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Received request by backend: {'username': 'admin', 'prompt': 'hi', 'memory': True, 'conversation_number': 0, 'AI_assistance': True, 'collection_name': 'string', 'llm_model': 'Llama_70b'}
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:34:19,763 - llm_as_a_service_logger - INFO - Retrieving conversation...
+2024-03-25 16:34:19,771 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff4e81566b0>
+2024-03-25 16:34:19,771 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff4e81566b0>
+2024-03-25 16:34:19,771 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff4e81566b0>
+2024-03-25 16:34:19,771 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff4e81566b0>
+2024-03-25 16:34:19,771 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff4e81566b0>
+2024-03-25 16:34:19,771 - llm_as_a_service_logger - INFO - User found: <app.routers.LLM.backend_database.User object at 0x7ff4e81566b0>
+2024-03-25 16:34:19,775 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:34:19,775 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:34:19,775 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:34:19,775 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:34:19,775 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:34:19,775 - llm_as_a_service_logger - ERROR - Conversation not found
+2024-03-25 16:34:22,671 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-03-25 16:34:22,671 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-03-25 16:34:22,671 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-03-25 16:34:22,671 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-03-25 16:34:22,671 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-03-25 16:34:22,671 - llm_as_a_service_logger - INFO - Processed the request successfully
+2024-03-25 16:53:19,321 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:53:19,321 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:53:19,321 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:53:19,321 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:17,995 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:17,995 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:17,995 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:17,995 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:56,010 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:56,010 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:56,010 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:54:56,010 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:55:30,274 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:55:30,274 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:55:30,274 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:55:30,274 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:13,478 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:13,478 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:13,478 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:13,478 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:59,272 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:59,272 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:59,272 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
+2024-03-25 16:56:59,272 - llm_as_a_service_logger - ERROR - Error in connecting to Weaviate
