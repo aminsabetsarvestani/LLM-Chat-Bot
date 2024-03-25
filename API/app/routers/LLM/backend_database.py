@@ -315,6 +315,7 @@ class Database:
             self.logger.error(f"Error occurred: {e}")
             return {"error": "An unexpected error occurred. Please try again later."}
     
+    
     def get_all_data(self):
         try:
             self.db = SessionLocal()
