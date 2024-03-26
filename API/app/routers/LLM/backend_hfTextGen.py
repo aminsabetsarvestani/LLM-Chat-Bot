@@ -32,6 +32,7 @@ from langchain.chains import RetrievalQA
 from langchain import PromptTemplate
 from langchain.vectorstores import Weaviate
 from app.logging_config import setup_logger
+from langchain import hub
 
 # ------------------- Configuration --------------------
 class Config:
@@ -40,15 +41,6 @@ class Config:
 
 
 
-current_path = pathlib.Path(__file__).parent.parent.parent
-config_path = current_path.parent / 'cluster_conf.yaml'
-
-with open(config_path, "r") as file:
-    
-    config = yaml.safe_load(file)
-    config = Config(**config)
-
-# ------------------- Initialize Ray Cluster --------------------
 class Input(BaseModel):
     username: Optional[str]
     prompt: Optional[str]
@@ -60,7 +52,7 @@ class Input(BaseModel):
 
 
 # ------------------------------ LLM Deployment -------------------------------
-class PredictDeployment:
+class LLMDeployment:
     def __init__(self, model_tokenizer,
                  temperature =  0.01,
                  max_new_tokens=  512,
@@ -70,105 +62,93 @@ class PredictDeployment:
 
         self.logger = setup_logger()
 
-        
-        # class initialization
+        current_path = pathlib.Path(__file__).parent.parent.parent.parent
+        config_path = current_path/ 'cluster_conf.yaml'
+
+        # Environment variables setup
+        with open(config_path, 'r') as self.file:
+            self.config = yaml.safe_load(self.file)
+            self.config = Config(**self.config)
+        # Initialize Weaviate client for RAG
         try:
             self.weaviate_client = weaviate.Client(
-                url=config.weaviate_client_url,   
+                url=self.config.weaviate_client_url,   
             )
         except:
             self.logger.error("Error in connecting to Weaviate")
             self.RAG_enabled = False
+
+        #setting up weight and bias logging
+        self.wandb_logging_enabled = self.config.WANDB_ENABLE
+        if self.wandb_logging_enabled:
+            try:
+                wandb.login(key = self.config.WANDB_KEY)
+                wandb.init(project="Service Metrics", notes="custom step")
+                wandb.define_metric("The number of input tokens")
+                wandb.define_metric("The number of generated tokens")
+                wandb.define_metric("Inference Time")
+                wandb.define_metric("token/second")
+                self.logger.info("Wandb Logging Enabled")
+            except:
+                self.wandb_logging_enabled = False
+                self.logger.info("Wandb Logging Not Enabled")
+                pass
+        
+        # Initialize deployment class
         self.model_tokenizer = model_tokenizer
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
         self.repetition_penalty = repetition_penalty
         self.batch_size = batch_size
         self.loop = asyncio.get_running_loop()
-
-        #setting up weight and bias logging
-        self.wandb_logging_enabled = config.WANDB_ENABLE
-        if self.wandb_logging_enabled:
-            try:
-                wandb.login(key = config.WANDB_KEY)
-                wandb.init(project="Service Metrics", notes="custom step")
-                # Define the custom x axis metric
-                wandb.define_metric("The number of input tokens")
-                wandb.define_metric("The number of generated tokens")
-                wandb.define_metric("Inference Time")
-                wandb.define_metric("token/second")
-            except:
-                self.wandb_logging_enabled = False
-                pass
-        # load config
-        with open("cluster_conf.yaml", "r") as self.file:
-            self.config = yaml.safe_load(self.file)
-            self.config = Config(**self.config)
-
-        self.access_token = config.Hugging_ACCESS_TOKEN
+        self.access_token = self.config.Hugging_ACCESS_TOKEN
         self.device = f"cuda:{cuda.current_device()}" if cuda.is_available() else "cpu"
         self.B_INST, self.E_INST = "[INST]", "[/INST]"
         self.B_SYS, self.E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n"
 
+        # initialize Prompt 
+        
+        prompt_hub = hub.pull("llmchatbot/default",api_key = self.config.Langchain_access_key, api_url="https://api.hub.langchain.com")
+        
+        
         self.DEFAULT_SYSTEM_PROMPT = """\
         You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
 
         If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information."""
 
         self.instruction = "Chat History:\n\n{chat_history} \n\nUser: {user_input}"
-        self.system_prompt = "You are a helpful assistant, you always only answer for the assistant then you stop. read the chat history to get context"
-
-        self.prompt_template = """The following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
-
-        Current conversation:
-        {chat_history}
-        Human: {input}
-        AI:"""
-
-        # setting up logging for debugging
-        
-        
-        # set quantization configuration to load large model 
-        self.device = f"cuda:{cuda.current_device()}" if cuda.is_available() else "cpu"
-     
-        # this requires the `bitsandbytes` library
+      
         
 
-        # begin initializing HF items, need auth token for these
-        
-
-        self.tokenizer = transformers.AutoTokenizer.from_pretrained(
-            self.model_tokenizer, padding_side="left", token =self.access_token
-        )
-        self.llm = HuggingFaceTextGenInference(
-    inference_server_url="http://localhost:8082/",
-    max_new_tokens=512,
-    top_k=10,
-    top_p=0.95,
-    typical_p=0.95,
-    temperature=0.01,
-    repetition_penalty=1.03,
-    streaming=True,
-)
-        template = "You are a helpful, respectful and honest AI assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information. Read the chat history to get context.\n\n Chat History:\n\n{chat_history} \n\nUser: {question}"
-        self.my_prompt = PromptTemplate(
-            input_variables=["chat_history", "question"], template=template
-        )
-        
-        # embeddings = OpenAIEmbeddings()
-
-        self.memory = ConversationBufferMemory(
-            memory_key="chat_history", return_messages=True, output_key="output"
-        )
-        #self.memory = ConversationTokenBufferMemory(llm=self.llm, max_token_limit=512, memory_key="chat_history",return_messages=True)
         self.template = self.get_prompt(self.instruction)
         self.prompt = PromptTemplate(
             input_variables=["chat_history", "user_input"], template=self.template
         )
+        self.prompt = prompt_hub
+        # initialize tokenizer for recording data related to requests e.g. number of input/ouput tokens
+        self.tokenizer = transformers.AutoTokenizer.from_pretrained(
+            self.model_tokenizer, padding_side="left", token =self.access_token
+        )
+        # Initialize LLM
+        self.llm = HuggingFaceTextGenInference(
+    inference_server_url=self.config.LLMs[0]["url"],
+    max_new_tokens=self.config.LLMs[0]["max_new_tokens"],
+    top_k=self.config.LLMs[0]["top_k"],
+    top_p=self.config.LLMs[0]["top_p"],
+    typical_p=self.config.LLMs[0]["typical_p"],
+    temperature=self.config.LLMs[0]["temperature"],
+    repetition_penalty=self.config.LLMs[0]["repetition_penalty"],
+    streaming=self.config.LLMs[0]["streaming"],
+)
+       
+        # Initialize Memory
 
-        # self.embeddings = HuggingFaceInstructEmbeddings(
-        #     model_name="hkunlp/instructor-xl", model_kwargs={"device": "cuda"}
-        # )
+        self.memory = ConversationBufferMemory(
+            memory_key="chat_history", return_messages=True, output_key="output"
+        )
+
+
+        # Initialize RAG if enabled
         if self.RAG_enabled:
             self.weaviate_vectorstore = Weaviate(
                 self.weaviate_client, 
@@ -176,7 +156,7 @@ class PredictDeployment:
                 'page_content', 
                 attributes=['page_content']
             )
-            # self.vectorstore_video = Chroma("YouTube_store", persist_directory=video_persist_directory, embedding_function=self.embeddings)
+            
             self.QA_document = RetrievalQA.from_chain_type(
                 llm=self.llm,
                 chain_type="stuff",
@@ -185,7 +165,8 @@ class PredictDeployment:
                 output_key="output",
             )
 
-        # self.QA_video = RetrievalQA.from_chain_type(llm=self.llm, chain_type="stuff", retriever=self.vectorstore_video.as_retriever(),memory = self.memory,output_key= "output")
+        # Initialize Database to store/restore chat history
+            
         self.database = Database()
 
     def get_collection_based_retriver(self, client, collection):
@@ -199,15 +180,6 @@ class PredictDeployment:
         )
         return weaviate_vectorstore
     
-    
-    '''def get_collection_based_retriver(self, collection):
-        vectorstore_doc = Chroma(
-            str(collection),
-            persist_directory=self.Doc_persist_directory,
-            embedding_function=self.embeddings,
-        )
-
-        return vectorstore_doc'''
 
     def get_prompt(self, instruction):
         SYSTEM_PROMPT = self.B_SYS + self.DEFAULT_SYSTEM_PROMPT + self.E_SYS
@@ -230,24 +202,6 @@ class PredictDeployment:
         self.memory.clear()
         print("Chat History Deleted")
 
-    def generate(self, text):
-        prompt = self.get_prompt(text)
-        with torch.autocast("cuda", dtype=torch.bfloat16):
-            inputs = self.tokenizer(prompt, return_tensors="pt").to("cuda")
-            outputs = self.model.generate(
-                **inputs,
-                max_new_tokens=512,
-                eos_token_id=self.tokenizer.eos_token_id,
-                pad_token_id=self.tokenizer.eos_token_id,
-            )
-            final_outputs = self.tokenizer.batch_decode(
-                outputs, skip_special_tokens=True
-            )[0]
-            final_outputs = self.cut_off_text(final_outputs, "</s>")
-            final_outputs = self.remove_substring(final_outputs, prompt)
-
-        return final_outputs  # , outputs
-
     def parse_text(self, text):
         pattern = r"\s*Assistant:\s*"
         pattern2 = r"\s*AI:\s*"
@@ -256,7 +210,7 @@ class PredictDeployment:
         wrapped_text = textwrap.fill(cleaned_text, width=100)
         return wrapped_text
 
-    def AI_assistance(self, request: Input):
+    def InferenceCall(self, request: Input):
         try:
             self.logger.info("Received request by backend: %s", request.dict())
             input_prompt = request.prompt
@@ -265,7 +219,7 @@ class PredictDeployment:
             memory = request.memory
             conversation_number = request.conversation_number
             collection_name = request.collection_name
-            # Initialize memory based on whether it's a new chat or not
+            
             if not memory:
                 memory = ConversationBufferMemory(
                     memory_key="chat_history", return_messages=True, output_key="output"
@@ -321,9 +275,6 @@ class PredictDeployment:
                     collection_name = f"{new_username}_{collection_name}"
                     retriever = self.get_collection_based_retriver(self.weaviate_client,collection_name)
                     
-                    #temp_retriever = retriever.as_retriever(search_type="similarity", search_kwargs={"k": 6})
-                    #retrieved_docs = temp_retriever.get_relevant_documents(input_prompt)
-                    #self.logger.info("Retrieved docs: %s", retrieved_docs)
                     llm_chain = RetrievalQA.from_chain_type(
                         llm=self.llm,
                         chain_type="stuff",

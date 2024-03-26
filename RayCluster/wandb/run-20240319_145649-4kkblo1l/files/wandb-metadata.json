@@ -1,0 +1,243 @@
+{
+    "os": "Linux-5.15.0-100-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-03-19T14:56:50.269524",
+    "startedAt": "2024-03-19T14:56:49.272084",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--node-ip-address=10.0.3.119",
+        "--node-manager-port=44785",
+        "--object-store-name=/tmp/ray/session_2024-03-19_14-54-24_988767_44/sockets/plasma_store",
+        "--raylet-name=/tmp/ray/session_2024-03-19_14-54-24_988767_44/sockets/raylet",
+        "--redis-address=None",
+        "--temp-dir=/tmp/ray",
+        "--metrics-agent-port=45481",
+        "--runtime-env-agent-port=49022",
+        "--logging-rotate-bytes=536870912",
+        "--logging-rotate-backup-count=5",
+        "--runtime-env-agent-port=49022",
+        "--gcs-address=10.0.3.119:6379",
+        "--session-name=session_2024-03-19_14-54-24_988767_44",
+        "--temp-dir=/tmp/ray",
+        "--webui=127.0.0.1:8265",
+        "--cluster-id=40f7d7790d95e02e2e2a6e85791db0c226ebabde8ee1f0b3c33922af",
+        "--startup-token=50",
+        "--worker-launch-time-ms=1710860205379"
+    ],
+    "state": "running",
+    "program": "/usr/local/lib/python3.10/dist-packages/ray/_private/workers/default_worker.py",
+    "codePathLocal": null,
+    "host": "amin-dev-mi210",
+    "username": "root",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 32,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 2550.0,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2550.0,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 457.74768447875977,
+            "used": 402.7691764831543
+        }
+    },
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "unique_id": "0x1eccb4d87de7abe9",
+            "vbios_version": "113-D67301-059",
+            "performance_level": "auto",
+            "gpu_overdrive": "0",
+            "gpu_memory_overdrive": "0",
+            "max_power": "300.0",
+            "series": "Instinct MI210",
+            "model": "0x0c34",
+            "vendor": "Advanced Micro Devices, Inc. [AMD/ATI]",
+            "sku": "D67301",
+            "sclk_range": "500Mhz - 1700Mhz",
+            "mclk_range": "400Mhz - 1600Mhz"
+        },
+        {
+            "unique_id": "0xbc8069d25b2a04de",
+            "vbios_version": "113-D67301-059",
+            "performance_level": "auto",
+            "gpu_overdrive": "0",
+            "gpu_memory_overdrive": "0",
+            "max_power": "300.0",
+            "series": "Instinct MI210",
+            "model": "0x0c34",
+            "vendor": "Advanced Micro Devices, Inc. [AMD/ATI]",
+            "sku": "D67301",
+            "sclk_range": "500Mhz - 1700Mhz",
+            "mclk_range": "400Mhz - 1600Mhz"
+        }
+    ],
+    "memory": {
+        "total": 251.69288635253906
+    }
+}

@@ -7,7 +7,7 @@ import yaml
 import pathlib
 import yaml
 import logging
-from app.routers.LLM.backend_hfTextGen import PredictDeployment
+from app.routers.LLM.backend_hfTextGen import LLMDeployment
 from app.logging_config import setup_logger
 current_path = pathlib.Path(__file__)
 
@@ -24,7 +24,7 @@ def get_route_prefix_for_llm(llm_name):
     return None
 
 Ray_service_URL = config.get("Ray_service_URL")
-llm = PredictDeployment(model_tokenizer="meta-llama/Llama-2-13b-chat-hf")
+llm = LLMDeployment(model_tokenizer="meta-llama/Llama-2-13b-chat-hf")
 router = APIRouter()
 
 @router.post("/")
@@ -33,7 +33,7 @@ async def create_inference(data: InferenceRequest, current_user: User = Depends(
     try:
         #data.memory = False
         data.username = current_user.username
-        response = llm.AI_assistance(data)
+        response = llm.InferenceCall(data)
         return {"username": current_user.username, "data":response}
 
     except requests.HTTPError as e:

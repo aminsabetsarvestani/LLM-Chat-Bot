@@ -1,0 +1,16 @@
+ray[data,train,tune,serve]
+langchain-community
+pydantic
+fastapi
+starlette
+langchain
+sqlalchemy
+passlib
+weaviate-client
+wandb
+langchain
+transformers
+text_generation
+torch --index-url https://download.pytorch.org/whl/rocm5.7
+torchvision --index-url https://download.pytorch.org/whl/rocm5.7
+torchaudio --index-url https://download.pytorch.org/whl/rocm5.7

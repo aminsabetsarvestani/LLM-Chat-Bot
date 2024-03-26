@@ -40,3 +40,4 @@ logs/
 data/*
 wandb/*
 docs/*
+API/wandb/*

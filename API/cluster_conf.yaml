@@ -4,7 +4,7 @@ admin_password: admin
 #----------------------- Hugging Configuration
 Hugging_ACCESS_TOKEN : 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
 #----------------------- Weight and Biases Key 
-WANDB_KEY : 251320f252f36c48298b9d80fc9fc0a06cedc9e1
+WANDB_KEY : 0e7a7b13e06cf5b342134be31eba89e3279dec96
 WANDB_ENABLE : True
 #----------------------- Database Configuration
 SECRET_KEY: 09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7 # Database secret Key
@@ -36,34 +36,22 @@ max_batch_size : 2
 batch_wait_timeout_s: 0.1
 #------------------- Kubernetes Cluster 
 cluster_URL:  http://192.168.199.207:8265
-#------------------- LLM Models
-LLMs: 
-  # - name: Llama_70b
-  #   model_id: "meta-llama/Llama-2-70b-chat-hf"
-  #   temperature: 0.01
-  #   max_new_tokens: 512
-  #   repetition_penalty: 1.1
-  #   batch_size: 2
-  #   route_prefix: Llama_70b
-  #   num_gpus: 0.45
-  #   min_replicas: 1
-  #   initial_replicas: 1
-  #   max_replicas: 2
-  #   target_num_ongoing_requests_per_replica: 2
-  #   max_concurrent_queries: 2
-  #   graceful_shutdown_wait_loop_s: 15
 
-  - name: Llama_13b
+#------------------- LLM Models
+
+Langchain_access_key: ls__c832be79a7804c9cb85244aff1782f6e
+LLMs: 
+  - name: Llama_7b
+    url: "http://localhost:8082/" 
     model_id: "meta-llama/Llama-2-13b-chat-hf"
     temperature: 0.01
     max_new_tokens: 512
     repetition_penalty: 1.1
     batch_size: 2
+    top_k: 10
+    top_p: 0.95
+    typical_p: 0.95
+    repetition_penalty: 1.03
     route_prefix: Llama_13b
-    num_gpus: 0
-    min_replicas: 1
-    initial_replicas: 1
-    max_replicas: 2
-    target_num_ongoing_requests_per_replica: 2
-    max_concurrent_queries: 2
-    graceful_shutdown_wait_loop_s: 15
+    streaming: True
+   
