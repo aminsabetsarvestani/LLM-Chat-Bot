@@ -110,7 +110,7 @@ class LLMDeployment:
         
         prompt_hub = hub.pull("llmchatbot/default",api_key = self.config.Langchain_access_key, api_url="https://api.hub.langchain.com")
         
-        
+
         self.DEFAULT_SYSTEM_PROMPT = """\
         You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
 
@@ -180,6 +180,7 @@ class LLMDeployment:
         )
         return weaviate_vectorstore
     
+
 
     def get_prompt(self, instruction):
         SYSTEM_PROMPT = self.B_SYS + self.DEFAULT_SYSTEM_PROMPT + self.E_SYS
